@@ -75,7 +75,7 @@ cnf(a,F) :- A=F.
 
 ```
 $  swipl
-calling the function *[cnf].*
+calling the function [cnf].
 ```
 ### References
 
