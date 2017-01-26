@@ -19,42 +19,51 @@ The set of well-formed formulae is defined by the following grammar:
 Load the module as usual in Prolog and then try the following.
 In the following examples, `cnf` is the function that normalizes to conjuntive normal form.
 
-```Prolog
 * cnf Denials disyunciones
+
+```Prolog
 cnf(a;(b^c),F).
 cnf((a^b);c,F).
 ```
+* remove biconditionals using equivalence
+
 ```Prolog
-* remove biconditionals using equivalence'
 cnf(a-;-b,F).
 ```
+* cnf remove conditional using equivalence
+
 ```Prolog
-* cnf remove conditional using equivalence'
 cnf(a-->b,F).
 ```
+* cnf Denials internalized using equivalences
+
 ```Prolog
-* cnf Denials internalized using equivalences'
 cnf(~(a-->b),F).
 cnf(~(a^b),F).
 cnf(~(a;b),F).
 ```
+* cnf conjuntion elemental and
+
 ```Prolog
-* cnf conjuntion elemental and'
 cnf(a^b,F).
 ```
+* cnf conjuntion elemental or
+
 ```Prolog
-* cnf conjuntio elemental or'
 cnf(a;b,F).
 ```
+* cnf of two negation
+
 ```Prolog
-* cnf of two negation'
 cnf(~(~(a)),F).
 ```
+* cnf of negation
+
 ```Prolog
-* cnf of negation'
 cnf(~(a),F).
 ```
+* otherwise atomic PROP
+
 ```Prolog
-* otherwise atomic PROP'
 cnf(a,F) :- A=F.
 ```
