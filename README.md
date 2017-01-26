@@ -79,4 +79,4 @@ calling the function [cnf].
 ```
 ### References
 
-* Mordechai_Ben-Ari. *Mathematical Logic for Computer Science*
+* M. Ben-Ari. Springer-Verlag London (2012). *Mathematical Logic for Computer Science*
