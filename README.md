@@ -70,3 +70,13 @@ cnf(~(a),F).
 ```Prolog
 cnf(a,F) :- A=F.
 ```
+
+### Testing
+
+```
+$  swipl
+calling the function `[cnf].`
+```
+### References
+
+* Mordechai_Ben-Ari. *Mathematical Logic for Computer Science*
