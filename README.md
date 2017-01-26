@@ -2,8 +2,11 @@
 
 Camilo Andrés Rodríguez Garzón
 
-Give one PROP return a PROP in conjunctive normal form (cnf).
-Prolog version: SWI-Prolog version 7.2.3 for x86_64-darwin15.2.0
+Cnf is a Prolog program intends to provide a solution
+give one PROP return a PROP in conjunctive normal form (cnf).
+Prolog version: SWI-Prolog version 7.2.3 for x86_64-darwin15.2.0.
+
+### Syntactic Proposition 
 
 The set of well-formed formulae is defined by the following grammar:
 
