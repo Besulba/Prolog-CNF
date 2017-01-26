@@ -4,7 +4,7 @@ Camilo Andrés Rodríguez Garzón
 
 Cnf is a Prolog program intends to provide a solution
 give one PROP return a PROP in conjunctive normal form (cnf).
-Prolog version: SWI-Prolog version 7.2.3 for x86_64-darwin15.2.0.
+SWI-Prolog version 7.2.3 for x86_64-darwin16.3.0
 
 ### Syntactic Proposition 
 
