@@ -11,7 +11,7 @@ SWI-Prolog version 7.2.3 for x86_64-darwin16.3.0
 The set of well-formed formulae is defined by the following grammar:
 
     for ::= p         (proposition symbols)
-    for | ~for        (negation)
+    for | ¬(for)        (negation)
     for | for ^ for   (conjunction)
     for | for ; for   (disjunction)
     for | for --> for (implication)
@@ -41,9 +41,9 @@ cnf(a-->b,F).
 * cnf Denials internalized using equivalences
 
 ```Prolog
-cnf(~(a-->b),F).
-cnf(~(a^b),F).
-cnf(~(a;b),F).
+cnf(¬(a-->b),F).
+cnf(¬(a^b),F).
+cnf(¬(a;b),F).
 ```
 * cnf conjuntion elemental and
 
@@ -58,12 +58,12 @@ cnf(a;b,F).
 * cnf of two negation
 
 ```Prolog
-cnf(~(~(a)),F).
+cnf(¬(¬(a)),F).
 ```
 * cnf of negation
 
 ```Prolog
-cnf(~(a),F).
+cnf(¬(a),F).
 ```
 * otherwise atomic PROP
 
@@ -79,4 +79,4 @@ calling the function [cnf].
 ```
 ### References
 
-* M. Ben-Ari. Springer-Verlag London (2012). *Mathematical Logic for Computer Science*
+* M. Ben-Ari. London (2012). *Mathematical Logic for Computer Science*
