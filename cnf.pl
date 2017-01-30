@@ -22,7 +22,7 @@ implication(A-->B,F) :- cnf(¬(A),X) , cnf(B,Y) , cnf(X;Y,F).
 
 %cnf conjuntion elemental and
 %Using De Morgan’s laws
-conjuntion(¬(A^B),F) :- cnf(¬(A),X) , cnf(¬(B),Y) , (X;Y) = F.
+conjuntion(¬(A^B),F) :- cnf(¬(A),X) , cnf(¬(B),Y) , disjunction((X;Y),F).
 conjuntion(A^B,F) :- cnf(A,X) , cnf(B,Y) , (X^Y) = F.
 
 %cnf disjunction elemental or
@@ -30,8 +30,8 @@ disjunction(A;(B^C),F) :- disjunction(A;B,X) , disjunction(A;C,Y) , (X^Y) = F.
 disjunction((A^B);C,F) :- disjunction(A;B,X) , disjunction(A;C,Y) , (X^Y) = F.
 %cnf Denials disyunciones'
 %Using De Morgan’s laws
-disjunction(¬(A;B),F) :- cnf(¬(A),X) , cnf(¬(B),Y) , (X^Y) = F.
-disjunction(A;B,F) :- cnf(A,X) , cnf(B,Y) , cnf(X;Y,Z), Z=F.
+disjunction(¬(A;B),F) :- cnf(¬(A),X) , cnf(¬(B),Y) , conjuntion((X^Y),F).
+disjunction(A;B,F) :- cnf(A,X) , cnf(B,Y) , (X;Y)=F.
 
 %cnf of two negation
 negation(¬(¬(X)),F) :- cnf(X,F).
