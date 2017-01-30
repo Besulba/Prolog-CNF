@@ -28,7 +28,7 @@ In the following examples, `cnf` is the function that normalizes to conjuntive n
 cnf(a;(b^c),F).
 cnf((a^b);c,F).
 ```
-* remove double implication using equivalence
+* cnf remove double implication using equivalence
 
 ```Prolog
 cnf(a=:=b,F).
@@ -55,7 +55,7 @@ cnf(a^b,F).
 ```Prolog
 cnf(a;b,F).
 ```
-* cnf of two negation
+* cnf of couple negation
 
 ```Prolog
 cnf(¬(¬(a)),F).
