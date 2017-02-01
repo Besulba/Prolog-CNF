@@ -68,7 +68,7 @@ cnf(~a,F).
 * otherwise atomic PROP
 
 ```Prolog
-cnf(a,F) :- A=F.
+cnf(a,F).
 ```
 
 ### Testing
